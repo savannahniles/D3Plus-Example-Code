@@ -1,0 +1,25 @@
+Tree map console examples:
+
+d3.select("#viz").call(viz.year(2009)) -- in console, can quickly update. Awesome.
+d3.select("#viz").call(viz.year(2009)depth(1)) -- can you chain commands
+d3.select("#viz").call(viz.color("artist_id")) -- colors the same by the same artist. fucking awesome
+d3.select("#viz").call(viz.year(2009).aggs({"hotness":"sum"}))
+d3.select("#viz").call(viz.year(2009).aggs({"hotness":"sum"}).depth(0))
+
+Say we want to want :artist_id in tool tip 
+
+var text_format = function(str, key) {
+	if str = "artist_id" return "Artist"
+	return str
+}
+
+then in the chained things after .tooltip
+.text_format(text_format)
+
+
+
+Bar chart notes:
+solo = pick two
+filter = remove these guys
+unique axis: "x" <-- what this means. 
+
